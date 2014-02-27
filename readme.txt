@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: Artin Hovhanesian
+Contributors: chrsinteractive
 Tags: theme options, social media, analytics
 Requires at least: 3.0.0
 Tested up to: 3.8.1
@@ -18,6 +18,7 @@ The plugin adds an admin interface where you can manage custom theme options.
 - Add social media links (Facebook, Twitter, etc.)
 
 Support
+
 Please submit your support requests through the WordPress forums for [Simple Theme Options](http://wordpress.org/support/plugin/simple-theme-options).
 
 == Installation ==
