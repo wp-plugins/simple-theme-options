@@ -3,7 +3,7 @@
 Plugin Name: Simple Theme Options
 Plugin URI: http://wordpress.org/plugins/simple-theme-options/
 Description: With Simple Theme Options plugin your can easily manage your custom theme options like social media links. You also have the option to add misc code to the header.php and footer.php files, including your analytics code.
-Version: 1.0
+Version: 1.1
 Author: Artin Hovhanesian
 Author URI: http://www.chrsinteractive.com/
 License: GPLv2 or later
@@ -30,9 +30,9 @@ if ( basename( $_SERVER['PHP_SELF'] ) == basename( __FILE__ ) ) {
 	die( 'Sorry, but you cannot access this page directly.' );
 }
 
-define( 'CHRSOP_VERSION', '1.0' );
+define( 'CHRSOP_VERSION', '1.1' );
 define( 'CHRSOP_REQUIRED_WP_VERSION', '3.0' );
-define('AKISMET_PLUGIN_URL', plugin_dir_url( __FILE__ ));
+define( 'CHRSOP_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 
 
 add_action( 'admin_enqueue_scripts', 'chrs_options_style' );
@@ -66,9 +66,7 @@ function chrs_theme_options_do() {
 	<?php screen_icon(); echo "<h2>". __( 'Theme Options', 'chrstheme' ) . "</h2>"; ?>
 	<?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
 	<div class="updated">
-		<p>
-			<?php _e( 'Options saved', 'chrstheme' ); ?>
-		</p>
+		<p><?php _e( 'Options saved', 'chrstheme' ); ?></p>
 	</div>
 	<?php endif; ?>
 	<form method="post" action="options.php">
@@ -103,6 +101,7 @@ function chrs_theme_options_do() {
 				</tr>
 			</table>
 			<p>Any code added within the above fields, will be automaticly added to the the header.php and footer.php files. No need to edit any theme files.</p>
+			<p><input type="submit" value="<?php _e( 'Save Options', 'chrstheme' ); ?>" class="button" /></p>
 		</div>
 		<div class="chrs-settings-block">
 			<h3>Social Media</h3>
@@ -165,9 +164,7 @@ function chrs_theme_options_do() {
 				</tr>
 			</table>
 		</div>
-		<p>
-			<input type="submit" value="<?php _e( 'Save Options', 'chrstheme' ); ?>" class="button" />
-		</p>
+		<p><input type="submit" value="<?php _e( 'Save Options', 'chrstheme' ); ?>" class="button" /></p>
 	</form>
 	<div class="chrs-settings-block">
 		<h3>Usage Instructions</h3>
@@ -209,8 +206,6 @@ function chrs_theme_options_do() {
 <?php
 }
 
-
-// http://melchoyce.github.io/dashicons/
 function chrs_theme_options_icon() {
 	echo '
 	<style>

@@ -1,9 +1,10 @@
-=== Plugin Name ===
+=== Simple Theme Options ===
 Contributors: chrsinteractive
-Tags: theme options, social media, analytics
+Plugin URI: http://www.chrsinteractive.com
+Tags: theme options, social media, analytics, admin, edit
 Requires at least: 3.0.0
-Tested up to: 3.8.1
-Stable tag: 1.0
+Tested up to: 3.9.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,5 +41,8 @@ An answer to that question.
 1. screenshot-1.png
 
 == Changelog ==
+
+= 1.1 =
+* Minor CSS + JS improvements
 
 == Upgrade notice ==
