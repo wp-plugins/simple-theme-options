@@ -4,7 +4,7 @@ Plugin URI: http://www.chrsinteractive.com
 Tags: theme options, social media, analytics, admin, edit
 Requires at least: 3.0.0
 Tested up to: 3.9.0
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,7 +42,14 @@ An answer to that question.
 
 == Changelog ==
 
+= 1.2 =
+* Fix input save issue for Youtube/Yelp
+* Added Wordpress.com / Linkedin / Tumblr
+
 = 1.1 =
 * Minor CSS + JS improvements
+
+= 1.0 =
+* Initial release
 
 == Upgrade notice ==

@@ -3,7 +3,7 @@
 Plugin Name: Simple Theme Options
 Plugin URI: http://wordpress.org/plugins/simple-theme-options/
 Description: With Simple Theme Options plugin your can easily manage your custom theme options like social media links. You also have the option to add misc code to the header.php and footer.php files, including your analytics code.
-Version: 1.1
+Version: 1.2
 Author: Artin Hovhanesian
 Author URI: http://www.chrsinteractive.com/
 License: GPLv2 or later
@@ -30,7 +30,7 @@ if ( basename( $_SERVER['PHP_SELF'] ) == basename( __FILE__ ) ) {
 	die( 'Sorry, but you cannot access this page directly.' );
 }
 
-define( 'CHRSOP_VERSION', '1.1' );
+define( 'CHRSOP_VERSION', '1.2' );
 define( 'CHRSOP_REQUIRED_WP_VERSION', '3.0' );
 define( 'CHRSOP_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 
@@ -157,9 +157,33 @@ function chrs_theme_options_do() {
 				<tr valign="top">
 					<th scope="row"> <?php _e( 'Yelp URL', 'chrstheme' ); ?>
 					</th>
-					<td><input id="chrs_theme_options[ypurl]" type="text" name="chrs_theme_options[yturl]" value="<?php esc_attr_e( $options['ypurl'] ); ?>" />
+					<td><input id="chrs_theme_options[ypurl]" type="text" name="chrs_theme_options[ypurl]" value="<?php esc_attr_e( $options['ypurl'] ); ?>" />
 						<label for="chrs_theme_options[ypurl]">
 							<?php _e( 'http://www.yelp.com/biz/yourprofileurl', 'chrstheme' ); ?>
+						</label></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row"> <?php _e( 'WordPress.com URL', 'chrstheme' ); ?>
+					</th>
+					<td><input id="chrs_theme_options[wpurl]" type="text" name="chrs_theme_options[wpurl]" value="<?php esc_attr_e( $options['wpurl'] ); ?>" />
+						<label for="chrs_theme_options[wpurl]">
+							<?php _e( 'http://yourprofile.wordpress.com', 'chrstheme' ); ?>
+						</label></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row"> <?php _e( 'Linkedin URL', 'chrstheme' ); ?>
+					</th>
+					<td><input id="chrs_theme_options[liurl]" type="text" name="chrs_theme_options[liurl]" value="<?php esc_attr_e( $options['liurl'] ); ?>" />
+						<label for="chrs_theme_options[liurl]">
+							<?php _e( 'https://www.linkedin.com/in/yourprofile', 'chrstheme' ); ?>
+						</label></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row"> <?php _e( 'Tumblr URL', 'chrstheme' ); ?>
+					</th>
+					<td><input id="chrs_theme_options[tburl]" type="text" name="chrs_theme_options[tburl]" value="<?php esc_attr_e( $options['tburl'] ); ?>" />
+						<label for="chrs_theme_options[tburl]">
+							<?php _e( 'https://yourprofile.tumblr.com', 'chrstheme' ); ?>
 						</label></td>
 				</tr>
 			</table>
@@ -175,30 +199,32 @@ function chrs_theme_options_do() {
 			<tr>
 				<td>Facebook</td>
 				<td><code>fburl</code></td>
-			</tr>
-			<tr>
 				<td>Twitter</td>
 				<td><code>twurl</code></td>
 			</tr>
 			<tr>
 				<td>Instagram</td>
 				<td><code>igurl</code></td>
-			</tr>
-			<tr>
 				<td>Google+</td>
 				<td><code>gpurl</code></td>
 			</tr>
 			<tr>
 				<td>Pinterest</td>
 				<td><code>pturl</code></td>
-			</tr>
-			<tr>
 				<td>Youtube</td>
 				<td><code>yturl</code></td>
 			</tr>
 			<tr>
 				<td>Yelp</td>
 				<td><code>ypurl</code></td>
+				<td>Wordpress</td>
+				<td><code>wpurl</code></td>
+			</tr>
+			<tr>
+				<td>LinkedIn</td>
+				<td><code>liurl</code></td>
+				<td>Tumblr</td>
+				<td><code>tburl</code></td>
 			</tr>
 		</table>
 	</div>
